@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node.js Hello World Sample
 
 This application demonstrates a simple, reusable Node.js web application based on the Express framework.
@@ -13,3 +14,6 @@ This application demonstrates a simple, reusable Node.js web application based o
 + Access the running app in a browser at <http://localhost:6001>
 
 [Install Node.js]: https://nodejs.org/en/download/
+=======
+# HyperU_IBM_Hackathon2017
+>>>>>>> beb5f0daf5f64426da0067c62751f615f542c7c9
