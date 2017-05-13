@@ -2,12 +2,18 @@
  * This file provides css styles.
  */
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 body,html {
-	background-color: #3b4b54; width : 100%;
+	background-color: #f7f8fc; 
+	width : 100%;
+	max-width : 1920px;
 	height: 100%;
 	margin: 0 auto;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #ffffff;
 }
 
 #pathToImage {

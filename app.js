@@ -41,12 +41,14 @@ app.post('/upload', function(req, res) {
 	let
 	sampleFile = req.files.sampleFile;
 
+	// res.param, res.params.id,/name
+
 	// Use the mv() method to place the file somewhere on your server
 	sampleFile.mv('filename.jpg', function(err) {
 		if (err)
 			return res.status(500).send(err);
 
-		res.send(API_Request_Image('filename.jpg'));
+		res.send(req.query.sampleText);
 	});
 });
 
