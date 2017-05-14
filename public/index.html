@@ -28,6 +28,67 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 
+<script>
+	var result = "\"<div class=\"row\" class=\"text-center\">"
+			+ "			<div style=\"text-align: center\" class=\"col-md-12\">"
+			+ "				<img src=\"images/Top.jpg\" style=\"width: 1280px;\">"
+			+ "         <button onclick=\'window.open(\"http://www.ebay.com/itm/Mid-Century-Modern-Brushed-Brass-Sputnik-Chandelier-light-fixture-18-Lights-/232286366326?hash=item361558aa76:g:ycsAAOSwImRYS74B\", \"ebayLink\")\' style=\"background-color: #f7f8fc; outline: none; border: none; padding: 0;\">"
+			+ "				<img src=\"images/middle.jpg\" style=\"width: 1280px;\">"
+			+ "				</button>"
+			+ "				<img src=\"images/bottom.jpg\" style=\"width: 1280px;\">"
+			+ "			</div>" + "		</div>\'";
+
+	var waiting = "\"<div id=\'load\' class=\'row\' class=\"text-center\">"
+			+ "			<div style=\"width: 1280px; text-align: center; background-color: black;\" class=\"col-md-12\">"
+			+ "				<img src=\"images/logo.gif\" style=\"width: 200px; height: 200px;\">"
+			+ "			</div>" + "		</div>\"";
+
+	var empty = "<div></div>";
+
+	var new5 = "\"<div id=\'five\' class=\'row\' class=\'text-center\'>"
+			+ "			<div style=\"text-align: center\" class=\"col-md-12\">"
+			+ "				<img src=\"images/Artboard51.jpg\" style=\"width: 1280px;\">"
+			+ "			</div>" + "		</div>\"";
+
+	var newLeft = "<div id=\"left\" style=\"text-align: center;\" class=\"col-md-5\">"
+			+ "				<img src=\"images/Left_side_new.jpg\""
+			+ "					style=\"max-width: 640px;\">"
+			+ "			</div>";
+
+	function newPic() {
+		
+		
+		setTimeout(function() {
+			$('#left').replaceWith(newLeft);
+		}, 2000);
+	}
+
+	function add() {
+		$('#load').replaceWith(waiting);
+
+		setTimeout(function() {
+
+			$('html, body').animate({
+				scrollTop : $("#five").offset().top
+			}, 2000);
+
+			$('#five').replaceWith(new5);
+
+			setTimeout(function() {
+				$('#result').append(result);
+
+				$('html, body').animate({
+					scrollTop : $("#result").offset().top
+				}, 2000);
+
+				$('#load').replaceWith(empty);
+
+			}, 5000);
+
+		}, 3000);
+
+	}
+</script>
 
 </head>
 
@@ -41,9 +102,18 @@
 		</div>
 
 		<div class="row" class="text-center">
-			<div style="text-align: center" class="col-md-12">
-				<img src="images/Artboard2.jpg" style="width: 1280px;">
+			<div class="col-md-1"></div>
+			<div id="left" style="text-align: center" class="col-md-5">
+				<img src="images/Left_side_Lady.jpg"
+					style="max-width: 640px; opacity: 0.4; filter: alpha(opacity = 40);">
 			</div>
+			<div style="text-align: center" class="col-md-5">
+				<button onclick='newPic()'
+					style="background-color: #f7f8fc; outline: none; border: none; padding: 0;">
+					<img src="images/Right_side.jpg" style="max-width: 640px;">
+				</button>
+			</div>
+			<div class="col-md-1"></div>
 		</div>
 
 		<div class="row" class="text-center">
@@ -51,9 +121,12 @@
 			</div>
 		</div>
 
-		<div class="row" class="text-center">
+		<div id="load" class="row" class="text-center">
 			<div style="text-align: center" class="col-md-12">
-				<img src="images/Artboard3.jpg" style="width: 1280px;">
+				<button onclick='add()'
+					style="background-color: #f7f8fc; outline: none; border: none; padding: 0;">
+					<img src="images/Artboard3.jpg" style="width: 1280px;">
+				</button>
 			</div>
 		</div>
 
@@ -62,15 +135,14 @@
 			</div>
 		</div>
 
-		<div class="row" class="text-center">
+		<div id="five" class="row" class="text-center">
 			<div style="text-align: center" class="col-md-12">
 				<img src="images/Artboard5.jpg" style="width: 1280px;">
 			</div>
 		</div>
 
 		<div class="row" class="text-center">
-			<div style="text-align: center" class="col-md-12">
-				<img src="images/Artboard4.jpg" style="width: 1280px;">
+			<div id="result" style="text-align: center" class="col-md-12">
 			</div>
 		</div>
 	</div>
